@@ -10,6 +10,12 @@ public class memberDTO {
 		
 	
 	
+	
+	public memberDTO(String nick, String address) {
+		super();
+		Nick = nick;
+		Address = address;//주변 센터 찾을 때 사용
+	}
 	public memberDTO(String email, String id, String pw, String nick, String address) {
 		super();
 		Email = email;

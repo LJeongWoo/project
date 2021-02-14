@@ -11,10 +11,14 @@ public class memberDTO {
 	
 	
 	
-	public memberDTO(String nick, String address) {
+	
+	
+	public memberDTO(String email, String id, String nick, String address) {
 		super();
+		Email = email;
+		Id = id;
 		Nick = nick;
-		Address = address;//주변 센터 찾을 때 사용
+		Address = address;
 	}
 	public memberDTO(String email, String id, String pw, String nick, String address) {
 		super();

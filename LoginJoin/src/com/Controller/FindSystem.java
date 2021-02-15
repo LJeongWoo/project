@@ -22,25 +22,25 @@ public class FindSystem extends HttpServlet {
 		
 		request.setCharacterEncoding("EUC-KR");
 		
-//		String Email = request.getParameter(Email);
-//		String Id = request.getParameter(Id);
-//		String Nick = request.getParameter(Nick);
-//	
-//		
-//		memberDAO dao = new memberDAO();
-//		
-//		memberDTO dto = dao.FindSystem(Email, Id, Nick);
-//				
-//		
-//		if(dto!=null) {
-//			HttpSession session = request.getSession();
-//			
-//			session.setAttribute("members", dto);
-//			
-//			response.sendRedirect("https://www.google.co.kr/maps/search/주변+"+dto.getAddress()+"+상담센터");
-//		}else {
-//			response.sendRedirect("erro.jsp");
-//		}
+		String Email = request.getParameter(Email);
+		String Id = request.getParameter(Id);
+		String Nick = request.getParameter(Nick);
+	
+		
+		memberDAO dao = new memberDAO();
+		
+		memberDTO dto = dao.FindSystem(Email, Id, Nick);
+				
+		
+		if(dto!=null) {
+			HttpSession session = request.getSession();
+			
+			session.setAttribute("members", dto);
+			
+			response.sendRedirect("https://www.google.co.kr/maps/search/주변+"+dto.getAddress()+"+상담센터");
+		}else {
+			response.sendRedirect("erro.jsp");
+		}
 		
 		
 		
